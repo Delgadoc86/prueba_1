@@ -1,0 +1,49 @@
+@use "variables"as *;
+
+.container {
+	display: grid;
+	grid-template-areas: 
+		"header header header" 
+		"main main aside" 
+		"footer footer footer";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto 1fr auto;
+	max-width: 90%; /* Cambiado a max-width */
+	margin: 0 auto; /* Centra el contenedor */
+	background: $color_2;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+	grid-area: header;
+	background-color: #333;
+	color: $color_2;
+	text-align: center;
+	padding: 20px;
+}
+
+main {
+	grid-area: main;
+	padding: 20px;
+	background-color: #f4f4f4;
+}
+
+aside {
+	grid-area: aside;
+	padding: 20px;
+	background-color: #ddd;
+}
+
+footer {
+	grid-area: footer;
+	background-color: $color_4;
+	color: $color_2;
+	text-align: center;
+	padding: 10px;
+	p {
+		color: $color_2;
+		margin: 0;
+	}
+}

@@ -1,0 +1,88 @@
+@use "variables" as *;
+
+
+h1 {
+    text-align: center; // Centra el texto del encabezado
+    margin-bottom: 20px; // Espacio debajo del encabezado
+    color: $color_4; // Color del texto del encabezado
+}
+
+.container-form {
+    display: flex; // Utiliza flexbox para centrar el contenido
+	flex-direction: column; // Apila los elementos verticalmente
+    justify-content: center; // Centra horizontalmente el contenido
+    align-items: center; // Centra verticalmente el contenido
+    max-width: 90%; // Ancho máximo del contenedor
+    margin: 0 auto; // Centra el contenedor en la página
+    padding: 20px; // Espaciado interno del contenedor
+    background-color: #f9f9f9; // Color de fondo del contenedor (tarjeta)
+    border-radius: 8px; // Bordes redondeados para el contenedor
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra sutil para la tarjeta
+}
+
+.form-group {
+    margin-bottom: 20px; // Espacio debajo de cada grupo de formulario
+    width: 20rem; // Ancho fijo para el grupo del formulario
+
+    label {
+        display: block; // Muestra la etiqueta como un bloque
+        margin-bottom: 8px; // Espacio debajo de la etiqueta
+        font-weight: bold; // Hace la fuente de la etiqueta en negrita
+        color: $color_4; // Color de la etiqueta
+        font-size: 14px; // Tamaño de la fuente de la etiqueta
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        width: 100%; // Aumenta el ancho de los inputs al 100% del contenedor
+        padding: 15px; // Aumenta el espaciado interno del input
+        border: 1px solid #ccc; // Borde del input
+        border-radius: 4px; // Bordes redondeados del input
+        transition: border-color 0.3s, box-shadow 0.3s; // Transición suave del color del borde y sombra
+
+        &:focus { // Estilo cuando el input está en foco
+            border-color: $color_4; // Cambia el color del borde al hacer foco
+            box-shadow: 0 0 5px rgba($color_4, 0.5); // Sombra alrededor del input en foco
+        }
+
+        &::placeholder { // Estilo del texto de placeholder
+            color: rgba(0, 0, 0, 0.5); // Color del placeholder
+            font-style: italic; // Estilo itálico para el placeholder
+        }
+    }
+}
+
+button {
+    width: 100%; // Hace que el botón ocupe todo el ancho del contenedor
+    padding: 15px; // Espaciado interno del botón
+    background-color: $color_4; // Color de fondo del botón
+    color: $color_2; // Color del texto del botón
+    border: none; // Sin borde
+    border-radius: 4px; // Bordes redondeados del botón
+    cursor: pointer; // Cambia el cursor al pasar sobre el botón
+    font-size: 16px; // Tamaño de fuente del texto del botón
+    font-weight: bold; // Texto en negrita
+    transition: background-color 0.3s, transform 0.2s; // Transición suave del color de fondo y transformaciones
+
+    &:hover { // Estilo cuando se pasa el mouse sobre el botón
+        background-color: darken($color_4, 10%); // Oscurece el color de fondo al pasar el mouse
+        transform: scale(1.05); // Aumenta ligeramente el tamaño del botón
+    }
+
+    &:active { // Estilo cuando el botón es presionado
+        transform: scale(0.95); // Reduce ligeramente el tamaño del botón
+    }
+}
+
+
+
+.mapa {
+    width: 100%; // Hace que el mapa ocupe todo el ancho del contenedor
+    margin: 20px auto; // Margen superior e inferior de 20px y centrado horizontalmente
+    display: flex; // Utiliza flexbox para alinear los elementos
+    justify-content: center; // Centra el contenido horizontalmente
+    align-items: center; // Centra el contenido verticalmente
+    border: 2px solid black; // Borde negro de 2px alrededor del mapa
+}
